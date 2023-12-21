@@ -5,53 +5,67 @@
 
 <div class="movie_detail_wrap">
 	<div class='movie_detail'>
-		<div>
+		<div class="movie_img_wrap">
 			<div class="movie_img">
 				<img src="${detail.movie_image}" alt="영화 이미지">
 			</div>
 		</div>
-		<ul class="movie_text">
-			<li><h3>${detail.movie_name}</h3></li>
-			<li class='movie_rank'>영화순위 : ${detail.movie_rank}</li>
-			<li>장르아이디 : ${detail.movie_genre_id}</li>
-			<li>상영시간 : ${detail.movie_running_time}</li>
-			<li>관람등급 : ${detail.movie_audience_rating}</li>
-			<li>개봉날짜 : ${detail.movie_production_year}</li>
-			<li>감독명 : ${detail.director_name}</li>
-			<li>배우명 : ${detail.actor_name}</li>
+		<div class="movie_text_wrap">
+			<ul class="movie_text">
+				<li><h3>${detail.movie_name}</h3></li>
+				<li class='movie_rank'>영화순위 : ${detail.movie_rank}</li>
+				<li>장르아이디 : ${detail.movie_genre_id}</li>
+				<li>상영시간 : ${detail.movie_running_time}</li>
+				<li>관람등급 : ${detail.movie_audience_rating}</li>
+				<li>개봉날짜 : ${detail.movie_production_year}</li>
+				<li>감독명 : ${detail.director_name}</li>
+				<li>배우명 : ${detail.actor_name}</li>
+			</ul>
 			<button>예매하기</button>
-		</ul>
+		</div>
 		<!-- movie_text end -->
 	</div>
 	<!-- movie_detail end -->
-	
-	
-	<div class="line"></div>	
+
+	<div class="line"></div>
 
 	<!-- 댓글시작 -->
 	<div class="review_wrap">
-		<!-- 댓글등록 -->
-		<form name="review_insert_form" id="review_insert_form">
-			<!-- 부모글번호 -->
-			<input type="hidden" name="movie_id" id="movie_id" value="${detail.movie_id }">
-			<table class="review">
-				<tr>
-					<td><input type="text" name="review_insert_content" id="review_insert_content" placeholder="댓글 내용을 입력해 주세요"></td>
-					<td><button type="button" name="review_insertBtn" id="review_insertBtn">댓글등록</button></td>
-				</tr>
-			</table>
-		</form>
+		<div class="review_insert_wrap">
+			<!-- 댓글등록 -->
+			<form name="review_insert_form" id="review_insert_form" method="get">
+
+				<table class="review">
+					<tr>
+						<td><input type="text" name="review_insert_content"
+							id="review_insert_content" placeholder="댓글 내용을 입력해 주세요"></td>
+						<td><input type="button" name="review_insertBtn"
+							id="review_insertBtn" value="댓글등록"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
 
 		<!-- 댓글 목록 -->
-		<div class="reviewlist">
-			<ul>
-				<li><h3>${review.review_id}</h3></li>
-				<li>${review.member_id}</li>
-				<li>${review.movie_id}</li>
-				<li>${review.movie_review}</li>
-				<li>${review.creation_date}</li>
-				<li>${review.movie_genre_id}</li>
-			</ul>
+		<div class="review_list">
+			<table>
+				<thead>
+					<tr>
+						<th>회원아이디</th>
+						<th>내용</th>
+						<th>작성일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${review}" var="row">
+						<tr>
+							<td>${row.member_id}</td>
+							<td>${row.movie_review}</td>
+							<td>${row.creation_date}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
 		</div>
 	</div>
 	<!-- 댓글 끝 -->

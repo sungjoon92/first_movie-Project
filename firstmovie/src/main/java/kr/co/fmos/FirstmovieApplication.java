@@ -38,6 +38,4 @@ public class FirstmovieApplication {
 	   }//sqlSession() end
 	   
 	   
-	
-
 }

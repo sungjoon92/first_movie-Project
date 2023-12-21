@@ -30,7 +30,7 @@
 						<div class="movie_img">
 							<img src="${dto.movie_image}" alt="영화 이미지">
 							<div class="click_btn">
-								<button onclick="location.href='detail/${dto.movie_id}'">상세보기</button>
+								<button onclick="location.href='detail?movie_id=${dto.movie_id}'">상세보기</button>
 								<button onclick="location.href=''">예매하기</a></button>
 							</div>
 						</div>
