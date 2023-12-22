@@ -46,8 +46,8 @@
                 </div>
                 <div class="nav_bottom">
                     <ul class="nav_wrap">
-                        <li><a href="/movie/list">영화</a></li>
-                        <li><a href="#">극장</a></li>
+                        <li><a href="/movie/list.do">영화</a></li>
+                        <li><a href="/theater/list.do">극장</a></li>
                         <li><a href="#" style="color: red;">예매</a></li>
                         <li><a href="/product/list.do">스토어</a></li>
                         <li><a href="#">이벤트</a></li>

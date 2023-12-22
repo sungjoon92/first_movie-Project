@@ -6,16 +6,11 @@
 
 <script>
 	$(function () {
-		
-	
-		$(".sel-city").click(function () {
+		let tabBtn = $(".sel-city");
+		let tabCont = $(".theater-place ul li");
 
-			//alert($(this).val());
-			let region_id = $(this).val()
-			location.href="http://localhost:9095/theater/list.do?region_id=" + region_id;
-			
-			// onclick="sel_city('region_001')"
-			/*
+		$(".sel-city").click(function () {
+			alert('11');
 			let target = $(this);
 			let index = target.index();
 			tabBtn.removeClass('on');
@@ -23,11 +18,8 @@
 			tabCont.hide();
 			tabCont.eq(index).show();
 			console.log(target);
-			*/
 		})//$(".sel-city").click end
-		
-	})//function end
-
+	})
 </script>
 
 <div id="contents" class="no-padding location-fixed">
@@ -38,8 +30,9 @@
 		<div class="theater-box" style="height:80px;">
 			<div class="theater-place">
 				<ul>
-					<li ${region_id=='region_001' ? 'class="on"' : ''}>
-						<button type="button" class="sel-city" value="region_001">${list.region}</button>
+					<li class="on">
+						<input type="button"class="sel-city">서울</button>
+
 						<div class="theater-list">
 							<ul>
 								<li data-brch-no=""><a href="#" title="강남 상세보기">강남</a></li>
@@ -53,8 +46,8 @@
 							</ul>
 						</div>
 					</li>
-					<li ${region_id=='region_002' ? 'class="on"' : ''}>
-						<button type="button" class="sel-city" value="region_002">${list.region}</button>
+					<li>
+						<button type="button" class="sel-city">경기</button>
 						<div class="theater-list">
 							<ul>
 								<li data-brch-no=""><a href="#" title="경기광주 상세보기">경기광주</a></li>
@@ -68,8 +61,8 @@
 							</ul>
 						</div>
 					</li>
-					<li ${region_id=='region_003' ? 'class="on"' : ''}>
-						<button type="button" class="sel-city" value="region_003">인천</button>
+					<li>
+						<button type="button" class="sel-city">인천</button>
 						<div class="theater-list">
 							<ul>
 								<li data-brch-no=""><a href="#" title="계양 상세보기">계양</a></li>
@@ -83,8 +76,8 @@
 							</ul>
 						</div>
 					</li>
-					<li ${region_id=='region_004' ? 'class="on"' : ''}>
-						<button type="button" class="sel-city" value="region_004">대전/충청/세종</button>
+					<li>
+						<button type="button" class="sel-city">대전/충청/세종</button>
 						<div class="theater-list">
 							<ul>
 								<li data-brch-no=""><a href="#" title="논산 상세보기">논산</a></li>
@@ -98,8 +91,8 @@
 							</ul>
 						</div>
 					</li>
-					<li ${region_id=='region_005' ? 'class="on"' : ''}>
-						<button type="button" class="sel-city" value="region_005">부산/대구/경상</button>
+					<li>
+						<button type="button" class="sel-city">부산/대구/경상</button>
 						<div class="theater-list">
 							<ul>
 								<li data-brch-no=""><a href="#" title="동래 상세보기">동래</a></li>
@@ -113,8 +106,8 @@
 							</ul>
 						</div>
 					</li>
-					<li ${region_id=='region_006' ? 'class="on"' : ''}>
-						<button type="button" class="sel-city" value="region_006">광주/전라</button>
+					<li>
+						<button type="button" class="sel-city">광주/전라</button>
 						<div class="theater-list">
 							<ul>
 								<li data-brch-no=""><a href="#" title="광양 상세보기">광양</a></li>
@@ -128,8 +121,8 @@
 							</ul>
 						</div>
 					</li>
-					<li ${region_id=='region_007' ? 'class="on"' : ''}>
-						<button type="button" class="sel-city" value="region_007">강원</button>
+					<li>
+						<button type="button" class="sel-city">강원</button>
 						<div class="theater-list">
 							<ul>
 								<li data-brch-no=""><a href="#" title="남춘천 상세보기">남춘천</a></li>
@@ -140,8 +133,8 @@
 							</ul>
 						</div>
 					</li>
-					<li ${region_id=='region_008' ? 'class="on"' : ''}>
-						<button type="button" class="sel-city" value="region_008">제주</button>
+					<li>
+						<button type="button" class="sel-city">제주</button>
 						<div class="theater-list">
 							<ul>
 								<li data-brch-no=""><a href="#" title="제주 상세보기">제주</a></li>

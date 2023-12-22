@@ -34,7 +34,7 @@ public class MovieCont {
 //		return list;
 //	}//mCommentserviceInsert() end
 
-	@GetMapping("/list")
+	@GetMapping("/list.do")
 	public ModelAndView list() {
 	
 		ModelAndView mav = new ModelAndView();
@@ -44,7 +44,7 @@ public class MovieCont {
 		return mav;
 	}//list() end
 
-	@GetMapping("/write")
+	@GetMapping("/write.do")
 	public String write() {
 		//로그인 했다면
 //		String s_id="itwill";
@@ -53,7 +53,7 @@ public class MovieCont {
 	
 	
 	//추가
-		@PostMapping("/insert")
+		@PostMapping("/insert.do")
 		@ResponseBody
 		public ModelAndView insert(MovieDTO moviedto, HttpSession session)throws Exception {
 										  //HttpServletRequest req
@@ -91,7 +91,7 @@ public class MovieCont {
 		
 		//spring04_web프로젝트 참조		
 		
-		@GetMapping("/detail")
+		@GetMapping("/detail.do")
 		//1)public ModelAndView detail(HttpServletRequest req) {
 			//String movie_id=req.getParameter("movie_id");
 		//2)public ModelAndView detail(@ModelAttribute MoviereviewDTO dto) {

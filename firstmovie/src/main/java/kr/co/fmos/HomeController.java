@@ -16,7 +16,7 @@ public class HomeController {
 	@RequestMapping("/main")
 	public ModelAndView home() {		
      ModelAndView mav = new ModelAndView();
-     //redirect : 등록한 명령어를 호출하 수 
+//     redirect : 등록한 명령어를 호출하 수 
      mav.setViewName("main");
      return mav;
 	}//home() end

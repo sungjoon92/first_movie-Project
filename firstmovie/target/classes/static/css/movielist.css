@@ -29,6 +29,10 @@
 	flex-wrap: wrap;
 }
 
+.movie_chart_wrap h3{
+	font-size: 30px;
+	font-weight: bold;
+}
 .insert_bt{
 	font-size: 20px;
 	position: absolute;	

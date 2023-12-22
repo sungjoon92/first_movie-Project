@@ -164,6 +164,7 @@ CREATE TABLE `region` (
 	`region`	VARCHAR(50)	NOT NULL
 );
 
+
 CREATE TABLE `theater_branch` (
 	`branch_id`	VARCHAR(30)  PRIMARY KEY	NOT NULL,
 	`region_id`	VARCHAR(30)	NOT NULL,

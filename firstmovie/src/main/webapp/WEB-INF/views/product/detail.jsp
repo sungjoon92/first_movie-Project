@@ -15,13 +15,13 @@
    		<div class="category_contents_wrap">
    			<ul class="category_content">
    				<li id="cm1" name="categorymenu">
-   					<a href="product/list.do">패키지</a>
+   					<a href="/product/category.do?product_category_id=1">패키지</a>
    				</li>
    				<li id="cm2" name="categorymenu">
-   					<a href="#">영화관람권</a>
+   					<a href="/product/category.do?product_category_id=2">영화관람권</a>
    				</li>
    				<li id="cm3" name="categorymenu">
-   					<a href="#">콤보</a>
+   					<a href="/product/category.do?product_category_id=3">콤보</a>
    				</li>
    				<li id="cm4" name="categorymenu">
    					<a href="#">팝콘</a>
@@ -35,10 +35,11 @@
    				<li id="cm7" name="categorymenu">
    					<a href="#">플레이존</a>
    				</li>
+   				</li>
    			</ul>
    			<ul class="cart_content">
    				<li>
-   					<a href="#">장바구니<span id="cartviewcnt">0</span></a>
+   					<a href="/cart/list.do">장바구니<span id="cartviewcnt">0</span></a>
    					
    				</li>
    			</ul>
@@ -61,10 +62,10 @@
 				</ul>
 				<div class="category_product_button">
 					<button>
-						<a href="#" onclick="javascript:app.goLogin();return false;">장바구니</a>
+						<value="장바구니" onclick="location.href='/cart/list.do'">장바구니</a>
 					</button>
 					<button>
-						<a href="#" onclick="javascript:app.goLogin();return false;">구매하기</a>
+						<value="구매하기" onclick="location.href='/order/confirm.do'">구매하기</a>
 					</button>
 				</div>
 			</div>

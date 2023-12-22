@@ -16,7 +16,7 @@
 			<li><a href="/movies/pre-movies.aspx">평점순</a></li>
 			<li><a href="/movies/pre-movies.aspx">관람객순</a></li>
 			<div class="insert_bt">
-				<a href="/movie/write">영화추가</a>
+				<a href="/movie/write.do">영화추가</a>
 			</div>
 		</ul>
 	</div>
@@ -30,7 +30,7 @@
 						<div class="movie_img">
 							<img src="${dto.movie_image}" alt="영화 이미지">
 							<div class="click_btn">
-								<button onclick="location.href='detail?movie_id=${dto.movie_id}'">상세보기</button>
+								<button onclick="location.href='detail.do?movie_id=${dto.movie_id}'">상세보기</button>
 								<button onclick="location.href=''">예매하기</a></button>
 							</div>
 						</div>
